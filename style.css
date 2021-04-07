@@ -1,0 +1,164 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background: hsl(204, 43%, 93%);
+}
+
+html, body {
+    height: 100%;
+}
+
+p {
+    color: hsl(204, 43%, 93%);
+    line-height: 2.5rem;
+}
+
+.main-wrapper {
+    max-width: 1440px;
+    /* max-width: 1080px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.content-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "top-box top-box"
+    "box-a box-b";
+    box-shadow: 0 0 500px 1px silver;
+    
+}
+
+h1, h3, p{
+    margin-top: 20px;
+    font-size: 1.8rem;
+}
+
+h1 {
+    font-size: 3rem;
+    color: hsl(204, 43%, 93%);
+
+}
+
+h2 {
+    color: hsl(204, 43%, 93%);
+
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: hsl(204, 43%, 93%);
+
+}
+
+h1 > span {
+    display: inline-block;
+    font-size: 1.8rem;
+    padding-bottom: auto;
+}
+
+.top-box {grid-area: top-box;}
+.box-a {grid-area: box-a;}
+.box-b {grid-area: box-b;}
+
+.top-box, .bottom-box{
+    padding: 60px;
+    padding: 3em;
+}
+
+.top-box {
+
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.top-box h2{
+    font-size: 3rem;
+    color: hsl(179, 62%, 43%);
+}
+
+.top-box h3{
+    color: hsl(71, 73%, 54%);
+    font-weight: 900;
+}
+
+.top-box p {
+    color: #C1C7D2;
+    font-size: 1.700rem;
+    font-weight: 600;
+    line-height: 3rem;
+}
+
+.dollar {
+    display: flex;
+    align-items: center;
+}
+
+.dollar p {
+    padding: 0;
+    margin-left: 25px;
+    font-size: 1.6rem;
+    opacity: .5;
+}
+
+.box-a {
+    background: hsl(179, 62%, 43%);
+}
+
+.box-a p{
+    font-size: 1.74rem;
+}
+
+.box-a a{
+    display: block;
+    width: 100%;
+    background: hsl(71, 73%, 54%);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.8rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    margin-top: 3.5em;
+}
+
+.box-b {
+    background: hsl(179, 62%, 43%);
+    opacity: .8;
+}
+
+@media only screen and (max-width:900px){
+    html {
+        font-size: 10px;
+    }
+    .main-wrapper{
+        height: auto;
+    }
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "top-box"
+        "box-a"
+        "box-b";
+        align-items: flex-start;
+        overflow: initial;
+    }
+}
+

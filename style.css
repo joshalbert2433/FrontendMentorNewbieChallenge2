@@ -10,6 +10,10 @@ body {
     background: hsl(204, 43%, 93%);
 }
 
+html {
+    font-size: 10px;
+}
+
 html, body {
     height: 100%;
 }
@@ -20,26 +24,24 @@ p {
 }
 
 .main-wrapper {
-    max-width: 1440px;
-    /* max-width: 1080px; */
+    max-width: 700px;
+    /* max-width: 1440px; */
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    height: 100%;
+    height: inherit;
 }
 
 .content-wrapper {
-    border-radius: 20px;
+    border-radius: .8rem;
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
     grid-template-areas: 
     "top-box top-box"
     "box-a box-b";
     box-shadow: 0 0 500px 1px silver;
-    
 }
 
 h1, h3, p{
@@ -76,8 +78,7 @@ h1 > span {
 .box-b {grid-area: box-b;}
 
 .top-box, .bottom-box{
-    padding: 60px;
-    padding: 3em;
+    padding: 3rem;
 }
 
 .top-box {
@@ -133,10 +134,15 @@ h1 > span {
     text-decoration: none;
     text-align: center;
     font-size: 1.8rem;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 1.7rem;
+    padding-bottom: 1.7rem;
     border-radius: 5px;
-    margin-top: 3.5em;
+    margin-top: 3.5rem;
+    font-weight: 600;
+}
+
+.box-a a:hover {
+    background: hsl(71, 63%, 50%);
 }
 
 .box-b {
@@ -150,6 +156,8 @@ h1 > span {
     }
     .main-wrapper{
         height: auto;
+        max-width: 375px;
+        padding: 10rem 0;
     }
     .content-wrapper {
         grid-template-columns: 1fr;
@@ -157,8 +165,6 @@ h1 > span {
         "top-box"
         "box-a"
         "box-b";
-        align-items: flex-start;
-        overflow: initial;
     }
 }
 
